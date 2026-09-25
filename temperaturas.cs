@@ -45,7 +45,7 @@ namespace ConsoleApp6
             Console.WriteLine("\n ----Reporte ----");
             Console.WriteLine($"temperaturas registradas: {string.Join(", ", temperaturas)}");
             Console.WriteLine($"temperatura promedio: {promedio:f2}°");
-            Console.WriteLine($"temperatura maxima: {MaxT}°");2
+            Console.WriteLine($"temperatura maxima: {MaxT}°");
 
                  Console.WriteLine($"temperatura minima: {MinT}°");
             
