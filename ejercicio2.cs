@@ -5,15 +5,15 @@ class Program
 {
     static void Main()
     {
-        string ruta = @"C:\\Users\SALA-1.UNICARIBE\\Desktop\\estructura de datos ALVARO PAREJO\\ejercicio2.csv";
+        string ruta = "C:\\Users\\SALA-1.UNICARIBE\\Desktop\\estructura de datos ALVARO PAREJO\\inventario.csv";
 
         using (StreamWriter sw = new StreamWriter(ruta))
         {
-            sw.WriteLine("ID,Nombre,Nota");
-            sw.WriteLine("1,Carlos,4.2");
-            sw.WriteLine("2,Maria,2.5");
-            sw.WriteLine("3,Pedro,3.8");
-            sw.WriteLine("4,Ana,2.9");
+            sw.WriteLine("ID,Nombre,Cantidad,Precio");
+            sw.WriteLine("1,Laptop,5,2500000");
+            sw.WriteLine("2,Mouse,15,35000");
+            sw.WriteLine("3,Teclado,8,80000");
+            sw.WriteLine("4,Monitor,20,750000");
         }
 
         string[] lineas = File.ReadAllLines(ruta);
@@ -22,19 +22,16 @@ class Program
         {
             string[] campos = lineas[i].Split(',');
 
-            int id = int.Parse(campos[0]);
-            string nombre = campos[1];
-            double nota = double.Parse(campos[2]);
+            int cantidad = int.Parse(campos[2]);
 
-            if (nota >= 3.0)
+            if (cantidad < 10)
             {
-                Console.WriteLine(
-                    "ID: " + id +
-                    " - Nombre: " + nombre +
-                    " - Nota: " + nota
-                );
+                Console.WriteLine("Producto: " + campos[1] +
+                                  " - Cantidad: " + cantidad +
+                                  " - Precio: $" + campos[3]);
             }
         }
     }
 }
+
 
