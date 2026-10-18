@@ -7,7 +7,7 @@ class Program
     {
         string ruta = "C:\\Users\\SALA-1.UNICARIBE\\Desktop\\estructura de datos ALVARO PAREJO\\Informacionpersonas.csv";
 
-        // 1. Creamos y escribimos el archivo CSV con información de personas
+        
         using (StreamWriter sw = new StreamWriter(ruta))
         {
             sw.WriteLine("Nombre,Apellido,Edad");
@@ -17,10 +17,9 @@ class Program
             sw.WriteLine("Lucía,Martínez,28");
         }
 
-        // 2. Leemos el archivo
+        
         string[] lineas = File.ReadAllLines(ruta);
 
-        // 3. Procesamos y mostramos los datos (saltando la cabecera)
         for (int i = 1; i < lineas.Length; i++)
         {
             string[] campos = lineas[i].Split(',');
