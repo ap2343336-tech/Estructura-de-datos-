@@ -1,43 +1,44 @@
-﻿using System;
+using System;
 using System.IO;
 
 class Program
 {
     static void Main()
     {
-        string ruta = "C:\\Users\\SALA-1.UNICARIBE\\Desktop\\estructura de datos ALVARO PAREJO\\ejercicio1.csv";
+        string ruta = "C:\\Users\\SALA-1.UNICARIBE\\Desktop\\estructura de datos ALVARO PAREJO\\ventas.txt";
 
         using (StreamWriter sw = new StreamWriter(ruta))
         {
             sw.WriteLine("Laptop:5");
-            sw.WriteLine("Mouse:12");
+            sw.WriteLine("Mouse:15");
             sw.WriteLine("Teclado:8");
-            sw.WriteLine("Monitor:3");
+            sw.WriteLine("Monitor:20");
         }
 
         string[] lineas = File.ReadAllLines(ruta);
 
         int total = 0;
-        int mayor = 0;
-        string producto = "";
+        string productoMayor = "";
+        int cantidadMayor = 0;
 
-        for (int i = 0; i < lineas.Length; i++)
+        foreach (string linea in lineas)
         {
-            string[] campos = lineas[i].Split(':');
+            string[] campos = linea.Split(':');
+
+            string producto = campos[0];
             int cantidad = int.Parse(campos[1]);
 
-            total = total + cantidad;
+            total += cantidad;
 
-            if (cantidad > mayor)
+            if (cantidad > cantidadMayor)
             {
-                mayor = cantidad;
-                producto = campos[0];
+                cantidadMayor = cantidad;
+                productoMayor = producto;
             }
         }
 
-        Console.WriteLine("Total vendido: " + total);
-        Console.WriteLine("Producto más vendido: " + producto);
-        Console.WriteLine("Cantidad vendida: " + mayor);
+        Console.WriteLine("Total de unidades vendidas: " + total);
+        Console.WriteLine("Producto más vendido: " + productoMayor);
+        Console.WriteLine("Cantidad vendida: " + cantidadMayor);
     }
 }
-
