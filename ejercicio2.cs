@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        string ruta = @"C:\Users\SALA-1.UNICARIBE\Desktop\estructura de datos ALVARO PAREJO\ejercicio2.csv";
+        string ruta = @"C:\\Users\SALA-1.UNICARIBE\\Desktop\\estructura de datos ALVARO PAREJO\\ejercicio2.csv";
 
         using (StreamWriter sw = new StreamWriter(ruta))
         {
