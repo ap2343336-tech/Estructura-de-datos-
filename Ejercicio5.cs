@@ -13,7 +13,7 @@ class Program
             foreach (string linea in lineas)
             {
                 string[] campos = linea.Split(',');
-                Console.WriteLine($"Nombre: {campos[0]}, Apellido: {campos[1]}");
+                Console.WriteLine($"Nombre: {campos[0]}, Apellido: {campos[1]}, Edad: {campos[2]}");
             }
         }
 
