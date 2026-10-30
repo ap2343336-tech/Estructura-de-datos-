@@ -1,0 +1,49 @@
+1. Preorden (Raíz → Izquierda → Derecha)
+
+Se visita primero la raíz, después el subárbol izquierdo y finalmente el derecho.
+
+Resultado:
+
+45, 23, 12, 34, 67, 56, 89
+
+2. Inorden (Izquierda → Raíz → Derecha)
+
+Se visita primero el subárbol izquierdo, después la raíz y finalmente el derecho.
+
+Resultado:
+
+12, 23, 34, 45, 56, 67, 89
+
+3. Posorden (Izquierda → Derecha → Raíz)
+
+Se visita primero el subárbol izquierdo, después el derecho y finalmente la raíz.
+
+Resultado:
+
+12, 34, 23, 56, 89, 67, 45
+
+3R/
+El recorrido Inorden de un Árbol Binario de Búsqueda siempre produce una secuencia ordenada de forma estrictamente ascendente porque cumple con una propiedad fundamental de los árboles BST:
+
+Subárbol izquierdo: Todos sus valores son menores que el valor de la raíz.
+
+Raíz: Contiene un valor mayor que todos los nodos de su subárbol izquierdo y menor que los del subárbol derecho.
+
+Subárbol derecho: Todos sus valores son mayores que el valor de la raíz.
+
+El recorrido Inorden sigue el orden Izquierda → Raíz → Derecha. Esto significa que primero visita los valores menores, después el valor de la raíz y finalmente los valores mayores.
+
+Demostración con el árbol del Ejercicio 1:
+Utilizando el árbol construido con los valores [45, 23, 67, 12, 34, 56, 89]:
+
+Primero se recorren los nodos del subárbol izquierdo: 12, 23 y 34.
+
+Después se visita la raíz principal: 45.
+
+Finalmente se recorren los nodos del subárbol derecho: 56, 67 y 89.
+
+Resultado del recorrido Inorden:
+
+12 → 23 → 34 → 45 → 56 → 67 → 89
+Orden estrictamente ascendente
+Cada número es mayor que el anterior.
