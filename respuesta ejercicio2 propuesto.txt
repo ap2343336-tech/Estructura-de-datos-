@@ -1,0 +1,23 @@
+1. Preorden (Raíz → Izquierda → Derecha)
+
+Se visita primero la raíz, después el subárbol izquierdo y finalmente el derecho.
+
+Resultado:
+
+45, 23, 12, 34, 67, 56, 89
+
+2. Inorden (Izquierda → Raíz → Derecha)
+
+Se visita primero el subárbol izquierdo, después la raíz y finalmente el derecho.
+
+Resultado:
+
+12, 23, 34, 45, 56, 67, 89
+
+3. Posorden (Izquierda → Derecha → Raíz)
+
+Se visita primero el subárbol izquierdo, después el derecho y finalmente la raíz.
+
+Resultado:
+
+12, 34, 23, 56, 89, 67, 45
